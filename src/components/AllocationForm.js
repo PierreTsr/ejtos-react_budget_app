@@ -33,6 +33,21 @@ const AllocationForm = (props) => {
             }
     };
 
+    const updateCost = (event) => {
+        if (event.target.validity.valid) {
+            if (parseInt(event.target.value) > remaining) {
+                alert('The value cannot exceed remaining funds: £' + remaining);
+                setCost(cost);
+            }
+            else {
+                setCost(event.target.value)
+            }
+        }
+        else {
+            setCost(cost);
+        }
+    };
+
     return (
         <div>
             <div className='row'>
@@ -64,8 +79,9 @@ const AllocationForm = (props) => {
                         type='number'
                         id='cost'
                         value={cost}
+                        pattern='/\d*/'
                         style={{ marginLeft: '2rem' , size: 10}}
-                        onChange={(event) => setCost(event.target.value)}>
+                        onChange={updateCost}>
                         </input>
 
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>

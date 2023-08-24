@@ -11,3 +11,86 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.input-box {
+display: flex;
+align-items: center;
+max-width: 300px;
+background: #fff;
+border: 1px solid #a0a0a0;
+border-radius: 4px;
+padding-left: 0.5rem;
+overflow: hidden;
+font-family: sans-serif;
+}
+
+.input-box .prefix {
+font-weight: 300;
+font-size: 14px;
+color: #999;
+}
+
+.input-box input {
+flex-grow: 1;
+font-size: 14px;
+background: #fff;
+border: none;
+outline: none;
+padding: 0.5rem;
+}
+
+.button_plus {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: green;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Mittig */
+    top: 50%;
+  }
+  
+  .button_plus:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 50%;
+    background: white;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .button_plus:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    height: 50%;
+    width: 4px;
+  }
+
+  .button_minus {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: red;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Mittig */
+    top: 50%;
+  }
+  
+  .button_minus:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 50%;
+    background: white;
+    top: 50%;
+    left: 50%;
+  }
+  
